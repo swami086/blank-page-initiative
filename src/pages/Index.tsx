@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Sparkles, Zap, Heart } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Heart, LogIn } from "lucide-react";
 
 const Index = () => {
   return (
@@ -15,9 +15,15 @@ const Index = () => {
             </div>
             <span className="text-xl font-bold text-gray-900">YourApp</span>
           </div>
-          <Button variant="outline" className="hover:scale-105 transition-transform">
-            Get Started
-          </Button>
+          <div className="flex items-center space-x-3">
+            <Button variant="ghost" className="hover:scale-105 transition-transform">
+              <LogIn className="w-4 h-4 mr-2" />
+              Login
+            </Button>
+            <Button variant="outline" className="hover:scale-105 transition-transform">
+              Get Started
+            </Button>
+          </div>
         </div>
       </nav>
 
