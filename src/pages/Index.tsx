@@ -1,87 +1,72 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Home, Star, Users } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Heart } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-gray-900 text-white">
-        <div className="container mx-auto px-6 py-8">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <Home className="w-8 h-8" />
-              <h1 className="text-2xl font-bold">Fresh Start</h1>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center max-w-4xl mx-auto">
+          <div className="flex justify-center mb-6">
+            <div className="p-3 bg-white rounded-full shadow-lg">
+              <Sparkles className="w-8 h-8 text-indigo-600" />
             </div>
-            <Button variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900">
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+            Build Something
+            <span className="text-indigo-600 block">Amazing</span>
+          </h1>
+          
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            A fresh, clean start for your next big idea. Simple, beautiful, and ready to customize.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="text-lg px-8 py-3">
               Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <Button variant="outline" size="lg" className="text-lg px-8 py-3">
+              Learn More
             </Button>
           </div>
         </div>
-      </header>
+      </div>
 
-      {/* Main Content */}
-      <main className="container mx-auto px-6 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Welcome to Your New Page
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            This is a completely fresh start. Build something amazing from here.
-          </p>
-        </div>
+      {/* Features Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="text-center p-8 bg-white rounded-xl shadow-sm">
+            <div className="inline-flex p-3 bg-indigo-100 rounded-full mb-4">
+              <Zap className="w-6 h-6 text-indigo-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Fast</h3>
+            <p className="text-gray-600">Built for speed and performance from the ground up.</p>
+          </div>
 
-        {/* Feature Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <Card>
-            <CardHeader>
-              <Star className="w-8 h-8 text-yellow-500 mb-2" />
-              <CardTitle>Quality</CardTitle>
-              <CardDescription>
-                Built with attention to detail and modern best practices
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Button className="w-full">Learn More</Button>
-            </CardContent>
-          </Card>
+          <div className="text-center p-8 bg-white rounded-xl shadow-sm">
+            <div className="inline-flex p-3 bg-green-100 rounded-full mb-4">
+              <Heart className="w-6 h-6 text-green-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Simple</h3>
+            <p className="text-gray-600">Clean design that focuses on what matters most.</p>
+          </div>
 
-          <Card>
-            <CardHeader>
-              <Users className="w-8 h-8 text-blue-500 mb-2" />
-              <CardTitle>Community</CardTitle>
-              <CardDescription>
-                Join a growing community of developers and creators
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Button className="w-full" variant="outline">Join Us</Button>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <Home className="w-8 h-8 text-green-500 mb-2" />
-              <CardTitle>Simple</CardTitle>
-              <CardDescription>
-                Clean, intuitive design that gets out of your way
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Button className="w-full" variant="secondary">Explore</Button>
-            </CardContent>
-          </Card>
-        </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-100 mt-20">
-        <div className="container mx-auto px-6 py-8">
-          <div className="text-center text-gray-600">
-            <p>&copy; 2024 Fresh Start. Ready to build something great.</p>
+          <div className="text-center p-8 bg-white rounded-xl shadow-sm">
+            <div className="inline-flex p-3 bg-purple-100 rounded-full mb-4">
+              <Sparkles className="w-6 h-6 text-purple-600" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Beautiful</h3>
+            <p className="text-gray-600">Designed with attention to detail and user experience.</p>
           </div>
         </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="container mx-auto px-4 py-8 text-center">
+        <p className="text-gray-500">© 2024 Your Project. Ready to build something great.</p>
       </footer>
     </div>
   );
